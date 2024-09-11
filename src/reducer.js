@@ -256,6 +256,15 @@ function reducer(
               ...response.group,
               id: decodeId(response.group.id),
             });
+
+            // Parse the jsonExt field
+            if (response?.group?.head?.jsonExt) {
+              try {
+                response.group.head.jsonExt = JSON.parse(response.group.head.jsonExt);
+              } catch (error) {
+                console.error("Error parsing jsonExt:", error);
+              }
+            }
           }
           return response;
         }),

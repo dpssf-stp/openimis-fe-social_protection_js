@@ -145,5 +145,12 @@
   "socialProtection.benefitPlan.schema.showSchema": "Show Schema",
   "socialProtection.benefitPlanTasks.label": "Tasks",
   "socialProtection.group.code": "Code",
-  "socialProtection.groupBeneficiary.code": "Code"
+  "socialProtection.groupBeneficiary.code": "Code",
+  "socialProtection.groupBeneficiary.head.dob": "Day of birth",
+  "socialProtection.groupBeneficiary.head.fullname": "Fullname",
+  "socialProtection.groupBeneficiary.head.nickname": "Nickname",
+  "socialProtection.groupBeneficiary.head.idNumber": "National ID",
+  "socialProtection.groupBeneficiary.head.sex": "Sex",
+  "socialProtection.groupBeneficiary.head.district": "District",
+  "socialProtection.groupBeneficiary.head.subDistrict": "Sub-District"
 }

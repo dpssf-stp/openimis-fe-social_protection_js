@@ -54,7 +54,7 @@ const BENEFICIARY_FULL_PROJECTION = () => [
 
 const GROUP_BENEFICIARY_FULL_PROJECTION = () => [
   'id',
-  'group {id, code, head {uuid}}',
+  'group {id, code, head {uuid, dob, jsonExt}}',
   'status',
 ];
 

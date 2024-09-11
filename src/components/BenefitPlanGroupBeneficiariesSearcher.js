@@ -63,6 +63,13 @@ function BenefitPlanGroupBeneficiariesSearcher({
 
   const headers = () => [
     'socialProtection.groupBeneficiary.code',
+    'socialProtection.groupBeneficiary.head.fullname',
+    'socialProtection.groupBeneficiary.head.nickname',
+    'socialProtection.groupBeneficiary.head.district',
+    'socialProtection.groupBeneficiary.head.subDistrict',
+    'socialProtection.groupBeneficiary.head.idNumber',
+    'socialProtection.groupBeneficiary.head.dob',
+    'socialProtection.groupBeneficiary.head.sex',
     'socialProtection.groupBeneficiary.status',
   ];
 
@@ -102,6 +109,13 @@ function BenefitPlanGroupBeneficiariesSearcher({
   const itemFormatters = () => {
     const result = [
       (groupBeneficiary) => groupBeneficiary.group.code,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.nome,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.vulgo,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.distrito,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.subdistrito,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.num_doc_id,
+      (groupBeneficiary) => groupBeneficiary.group.head.dob,
+      (groupBeneficiary) => groupBeneficiary.group.head.jsonExt.sexo,
       (groupBeneficiary) => (rights.includes(RIGHT_BENEFICIARY_UPDATE) ? (
         <BeneficiaryStatusPicker
           withLabel={false}
@@ -129,6 +143,7 @@ function BenefitPlanGroupBeneficiariesSearcher({
 
   const sorts = () => [
     ['group_Id', false],
+    ['head', false],
     ['status', false],
   ];
 
